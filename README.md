@@ -3,4 +3,5 @@
 ### Intermediate Algorithm Scripting from FreeCodeCamp
 
 #### Example:
-http://manuel-valles.com/project/algorithm/
+<a href="http://manuel-valles.com/project/algorithm/" target="_blank">Algorithms!</a>
+
