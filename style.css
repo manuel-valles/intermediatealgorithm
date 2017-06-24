@@ -1,13 +1,13 @@
 body{
 	margin: 50px auto;
 }
-h1{
-	margin-bottom: 20px;
+h1, h4{
+	margin: 50px auto 20px;
 }
-button{
-	margin: 5px;
-}
-.bg-info{
+.text-center{
 	border: none;
 }
 
+.row{
+	margin: 20px 0;
+}
