@@ -1,6 +1,6 @@
 # intermediatealgorithm
 
-###Intermediate Algorithm Scripting from FreeCodeCamp
+### Intermediate Algorithm Scripting from FreeCodeCamp
 
-####Example:
+#### Example:
 http://manuel-valles.com/project/algorithm/
