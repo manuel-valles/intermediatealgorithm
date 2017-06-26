@@ -16,20 +16,27 @@
 			<input class="col-2 mx-2" type="number" id="second" placeholder="5">]
 		</div>
 		<div class="row">
-			<button type="submit" class="btn btn-sm btn-primary mx-2" id="buttonSum">Result</button>
+			<button type="button" class="btn btn-sm btn-primary mx-2" id="buttonSum">Result</button>
 			<input class="col-2 mx-2 bg-info text-center" type="number" id="resultSum" readonly>
 		</div>
 			
 		<h4>Diff Two Arrays</h4>
 		<p class="text-muted">*Add your arrays whithout brackets</p>
 		<div class="row">
-			<h6 class="col-1">diffArray</h6>([
-			<input class="col-3" type="text" id="arr1" placeholder='1, "calf", 3, "piglet"'>],[
-			<input class="col-3" type="text" id="arr2" placeholder='1, "calf", 3, 4'>])
+			<h6 class="col-2">diffArray</h6>([
+			<input class="col-4" type="text" id="arr1" placeholder='1, "calf", 3, "piglet"'>],[
+			<input class="col-4" type="text" id="arr2" placeholder='1, "calf", 3, 4'>])
 		</div>
 		<div class="row">
-			<button class="btn btn-sm btn-success mx-2" type="submit"  id="buttonDiff">Result</button>
-			[<input class="col-2 bg-success text-center" type="text" id="resultDiff" readonly>]
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="buttonDiff">Result</button>
+			[<input class="col-6 bg-success text-center" type="text" id="resultDiff" readonly>]
+		</div>
+
+		<h4>Roman Numeral Converter</h4>
+		<div class="row">
+			<input class="col-2 mx-2" type="number" id="number" placeholder="5" min="1">
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="buttonRoman">Result</button>
+			<input class="col-4 bg-info text-center" type="text" id="resultRoman" readonly>
 		</div>
 	</div>
 	<script
