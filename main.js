@@ -63,3 +63,38 @@ $("#buttonRoman").click(function() {
 	var number = parseInt($("#number").val());
 	$("#resultRoman").val(convertToRoman2(number));
 });
+
+
+// WHEREFORE ART THOU
+function whatIsInAName(collection, source) {
+  var arr = [];
+  collection.filter(function(element) {
+  // This callback is a predicate, to test each element of the array. Return false to NOT keep the element.
+  	for (var key in source){
+  		// console.log(source, key,source[key], element[key]);
+  		if (source[key] != element[key]){
+  			return false;
+  		}
+  	}
+    return arr.push(element);
+  });
+  // console.log(arr);
+  return arr;
+}
+// There is some invalid JSON format. With ONLY JSON would be:
+// var romeo = JSON.parse($("#arr3").val());
+// var juliet = JSON.parse($("#obj1").val());
+
+// Unquoted JSON isn't JSON - 
+// the JSON spec requires that strings are quoted (with double quotes, not single quotes).
+// If you have JSON with unquoted strings what you actually have is just plain JavaScript. 
+// So run eval() on it.
+// 	var obj = eval('(' + invalid_json + ')');
+
+$("#romeoJuliet").click(function() {
+	invalid_json = $("#arr3").val();
+	invalid_json2 = $("#obj1").val();
+	var romeo = eval('(' + invalid_json + ')');
+	var juliet = eval('(' + invalid_json2 + ')');
+	$("#resultFamily").val(JSON.stringify(whatIsInAName(romeo, juliet)));
+});
