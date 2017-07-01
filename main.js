@@ -83,7 +83,7 @@ function whatIsInAName(collection, source) {
 // Unquoted JSON isn't JSON - 
 // The JSON spec requires that strings are quoted (with double quotes, not single quotes).
 // If you have JSON with unquoted strings what you actually have is just plain JavaScript. 
-// So run eval() on it. var obj = eval('(' + invalid_json + ')');
+// So run eval() on it. kbvar obj = eval('(' + invalid_json + ')');
 
 $("#romeoJuliet").click(function() {
 	invalid_json = $("#arr3").val();
@@ -91,4 +91,28 @@ $("#romeoJuliet").click(function() {
 	var romeo = eval('(' + invalid_json + ')');
 	var juliet = eval('(' + invalid_json2 + ')');
 	$("#resultFamily").val(JSON.stringify(whatIsInAName(romeo, juliet)));
+});
+
+
+// SEARCH AND REPLACE
+function myReplace(str, before, after) {
+	if( before[0] === before[0].toUpperCase()){
+      after = after.split('');
+      after[0] = after[0].toUpperCase();
+      after = after.join('');
+  	}
+  str= str.replace(before, after);
+  return str;
+}
+// An easier way with charAt function
+function myReplace(str, before, after) {
+	if( before.charAt(0) === before.charAt(0).toUpperCase()){
+      after = after.charAt(0).toUpperCase() + after.slice(1);
+  	}
+  str = str.replace(before, after);
+  return str;
+}
+
+$("#search").click(function() {
+	$("#replace").val(myReplace($("#string").val(),$("#before").val(),$("#after").val()));
 });
