@@ -116,3 +116,23 @@ function myReplace(str, before, after) {
 $("#search").click(function() {
 	$("#replace").val(myReplace($("#string").val(),$("#before").val(),$("#after").val()));
 });
+
+
+// PIG LATIN
+function translatePigLatin(str) {
+	var vowels = ["a","e", "i", "o","u"];
+	if(vowels.indexOf(str.charAt(0)) !== -1){
+		str += "way";
+	} else{
+		if(vowels.indexOf(str.charAt(1)) !==-1){
+			str = str.slice(1)+str.charAt(0)+'ay';
+		} else{
+			str = str.slice(2)+str.slice(0,2)+'ay';
+		}
+	}
+  	return str;
+}
+
+$("#translate").click(function() {
+	$("#pigWord").val(translatePigLatin($("#originalWord").val()));
+});

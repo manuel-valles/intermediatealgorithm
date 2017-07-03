@@ -35,6 +35,8 @@
 		<h4>Roman Numeral Converter</h4>
 		<div class="row">
 			<input class="col-2 mx-2" type="number" id="number" placeholder="5" min="1">
+        </div>
+      	<div class="row">
 			<button class="btn btn-sm btn-primary mx-2" type="button"  id="buttonRoman">Result</button>
 			<input class="col-4 bg-info text-center" type="text" id="resultRoman" readonly>
 		</div>
@@ -50,7 +52,7 @@
 		</div>
 
 		<h4>Search and Replace</h4>
-		<p class="text-muted">*Don't use quotes</p>
+		<p class="text-muted">*Don't use quotation marks.</p>
 		<div class="row">
 			<h6 class="col-12">myReplace</h6> 
 			("<input class="col-5" type="text" id="string" placeholder='Let us go to the Store'>" ,
@@ -58,8 +60,18 @@
 			"<input class="col-2" type="text" id="after" placeholder='mall'>")
 		</div>
 		<div class="row">
-			<button class="btn btn-sm btn-success mx-2" type="button"  id="search">Result</button>
-			<input class="col-6 bg-success text-center" type="text" id="replace" readonly>
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="search">Result</button>
+			<input class="col-6 bg-info text-center" type="text" id="replace" readonly>
+		</div>
+
+		<h4>Pig Latin</h4>
+		<p class="text-muted">*Don't use quotation marks.<br>Translate any word to Pig Latin.</p>
+		<div class="row">
+			<input class="col-2 mx-2" type="text" id="originalWord" placeholder="california">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="translate">Translate</button>
+			<input class="col-4 bg-success text-center" type="text" id="pigWord" readonly>
 		</div>
 	</div>
 	<script
