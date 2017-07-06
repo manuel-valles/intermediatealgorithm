@@ -136,3 +136,33 @@ function translatePigLatin(str) {
 $("#translate").click(function() {
 	$("#pigWord").val(translatePigLatin($("#originalWord").val()));
 });
+
+// DNA PAIRING
+function pairElement(str) {
+	var at = ["A", "T", "A"];
+	var cg = ["C","G", "C"];
+	var arr = [];
+	str = str.split('');
+	str.forEach( function(element, index) {
+		if(cg.includes(element)){
+			arr.push([(element), cg[cg.indexOf(element)+1]]);
+		} else if(at.includes(element)){
+			arr.push([(element), at[at.indexOf(element)+1]]);
+		}
+	});
+  return arr;
+}
+// Shorter Option with an object
+function pairElement(str) {
+	var pairs = {A:'T', T:'A', C:'G', G:'C'};
+	// Map method to create the new array
+	var arr = str.split('').map(function(item) {
+		return [item, pairs[item]];
+	});
+	return arr;
+}
+// console.log(pairElement("GCG"));
+$("#fixIt").click(function() {
+	// stringify for displaying the array, not a string.
+	$("#array2d").val(JSON.stringify(pairElement($("#strand").val())));
+});

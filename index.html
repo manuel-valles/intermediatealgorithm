@@ -73,6 +73,16 @@
 			<button class="btn btn-sm btn-success mx-2" type="button"  id="translate">Translate</button>
 			<input class="col-4 bg-success text-center" type="text" id="pigWord" readonly>
 		</div>
+
+		<h4>DNA Pairing</h4>
+		<p class="text-muted">The DNA strand is missing the pairing element. Put your DNA strand here and I will take each character, get its pair, and return the results as a 2d array.</p>
+		<div class="row">
+			<input class="col-2 mx-2" type="text" id="strand" placeholder="GCG">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="fixIt">Fix</button>
+			<input class="col-8 bg-info text-center" type="text" id="array2d" readonly>
+		</div>
 	</div>
 	<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
