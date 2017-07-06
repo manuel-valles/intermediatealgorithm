@@ -163,6 +163,8 @@ function pairElement(str) {
 }
 // console.log(pairElement("GCG"));
 $("#fixIt").click(function() {
+	// In case the input is in lowercase.
+	var strand = $("#strand").val().toUpperCase();
 	// stringify for displaying the array, not a string.
-	$("#array2d").val(JSON.stringify(pairElement($("#strand").val())));
+	$("#array2d").val(JSON.stringify(pairElement(strand)));
 });
