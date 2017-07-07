@@ -168,3 +168,22 @@ $("#fixIt").click(function() {
 	// stringify for displaying the array, not a string.
 	$("#array2d").val(JSON.stringify(pairElement(strand)));
 });
+
+
+// MISSING LETTERS
+function fearNotLetter(str) {
+	for (var i = 0; i < str.length-1; i++) {
+		if(str.charCodeAt(i)+1 != str.charCodeAt(i+1)){
+			return String.fromCharCode(str.charCodeAt(i)+1);
+		}
+	}
+	// Undefined has been modified to string for the purpose of the display.
+	// It should be: return undefined;
+	return "undefined";
+}
+// console.log(fearNotLetter("abcdefghjklmno"));
+// console.log(fearNotLetter("bcd"));
+$("#findIt").click(function() {
+	$("#letterFound").val(fearNotLetter($("#letterRange").val()));
+});
+

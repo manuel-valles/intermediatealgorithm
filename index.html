@@ -83,6 +83,17 @@
 			<button class="btn btn-sm btn-primary mx-2" type="button"  id="fixIt">Fix</button>
 			<input class="col-8 bg-info text-center" type="text" id="array2d" readonly>
 		</div>
+
+		<h4>Missing Letters</h4>
+		<p class="text-muted">Give a letter range (without quotation marks), and click Find It. It will find the missing letter for you.<br>*If all letters are present in the range, it will return undefined.</p>
+		
+		<div class="row">
+			<input class="col-2 mx-2" type="text" id="letterRange" placeholder="abcdefghjklmno">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="findIt">Find It</button>
+			<input class="col-6 bg-success text-center" type="text" id="letterFound" readonly>
+		</div>
 	</div>
 	<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
