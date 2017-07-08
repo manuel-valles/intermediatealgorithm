@@ -187,3 +187,24 @@ $("#findIt").click(function() {
 	$("#letterFound").val(fearNotLetter($("#letterRange").val()));
 });
 
+
+// BOO WHO
+function booWho(bool) {
+  // What is the new fad diet for ghost developers? The Boolean.
+  return (bool === true || bool === false);
+}
+//Another simple option:
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
+
+// booWho(null);
+$("#checkIt").click(function() {
+	var input = $("#anyValue").val();
+	var bbool = eval(input);
+	$("#trueFalse").val(booWho(bbool));
+	// console.log(typeof bbool, bbool);
+});
+
+
+
