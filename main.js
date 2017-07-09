@@ -199,6 +199,7 @@ function booWho(bool) {
 }
 
 // booWho(null);
+
 $("#checkIt").click(function() {
 	var input = $("#anyValue").val();
 	var bbool = eval(input);
@@ -206,5 +207,28 @@ $("#checkIt").click(function() {
 	// console.log(typeof bbool, bbool);
 });
 
+
+
+// SORTED UNION
+// ES6 has been modified for the correct display. It should be:
+// function uniteUnique(...arr){
+function uniteUnique(arr) {
+	var newArr = [];
+	arr.forEach( function(element, index) {
+		element.forEach( function(element2, index2) {
+			if(!newArr.includes(element2)){
+				newArr.push(element2);
+			}
+		});
+	});
+  return newArr;
+}
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+$("#sortIt").click(function() {
+	var originalArr = $("#originalArray").val();
+	originalArr = JSON.parse('[' + originalArr + ']');
+	$("#finalArray").val(JSON.stringify(uniteUnique(originalArr)));
+});
 
 
