@@ -65,7 +65,7 @@
 		</div>
 
 		<h4>Pig Latin</h4>
-		<p class="text-muted">*Don't use quotation marks.<br>Translate any word to Pig Latin.</p>
+		<p class="text-muted">Translate any word to Pig Latin.<br><small>*Don't use quotation marks.</small></p>
 		<div class="row">
 			<input class="col-2 mx-2" type="text" id="originalWord" placeholder="california">
         </div>
@@ -85,7 +85,7 @@
 		</div>
 
 		<h4>Missing Letters</h4>
-		<p class="text-muted">Give a letter range (without quotation marks), and click Find It. It will find the missing letter for you.<br>*If all letters are present in the range, it will return undefined.</p>
+		<p class="text-muted">Give a letter range (without quotation marks), and click Find It. It will find the missing letter for you.<br><small>*If all letters are present in the range, it will return undefined.</small></p>
 		
 		<div class="row">
 			<input class="col-2 mx-2" type="text" id="letterRange" placeholder="abcdefghjklmno">
@@ -115,6 +115,18 @@
       	<div class="row">
 			<button class="btn btn-sm btn-success mx-2" type="button"  id="sortIt">New Array</button>
 			<input class="col-8 bg-success text-center" type="text" id="finalArray" readonly>
+		</div>
+
+		<h4>Convert HTML Entities</h4>
+		<p class="text-muted">Give a string and it will convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.<br><small>*If you don't need the outermost quotes, just don't give them.</small></p>
+
+		
+		<div class="row">
+			<input class="col-10 mx-2" type="text" id="stringTo" placeholder='Stuff in "quotation marks"'>
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="convertIt">To Entities</button>
+			<input class="col-8 bg-success text-center" type="text" id="htmlEnt" readonly>
 		</div>
 	</div>
 	<script

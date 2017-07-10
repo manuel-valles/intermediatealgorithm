@@ -232,3 +232,18 @@ $("#sortIt").click(function() {
 });
 
 
+
+// CONVERT HTML ENTITIES
+function convertHTML(str) {
+  // &colon;&rpar;
+  var entities = {'&':'&amp;', '<':'&lt;', '>':'&gt;', '\"':'&quot;', '\'':'&apos;'};
+  return str.split('').map(function(char) {
+  	// This will return one of these options. If it's undefined/not there, it will give a falsy value.
+  	return entities[char] || char;
+  }).join('');
+}
+// console.log(convertHTML("Hamburgers < Pizza < Tacos"));
+$("#convertIt").click(function() {
+	var stringTo = $("#stringTo").val();
+	$("#htmlEnt").val(convertHTML(stringTo));
+});
