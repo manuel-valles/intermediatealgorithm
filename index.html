@@ -86,7 +86,6 @@
 
 		<h4>Missing Letters</h4>
 		<p class="text-muted">Give a letter range (without quotation marks), and click Find It. It will find the missing letter for you.<br><small>*If all letters are present in the range, it will return undefined.</small></p>
-		
 		<div class="row">
 			<input class="col-2 mx-2" type="text" id="letterRange" placeholder="abcdefghjklmno">
         </div>
@@ -97,7 +96,6 @@
 
 		<h4>Boo Who</h4>
 		<p class="text-muted">Check if a value is classified as a boolean primitive. Return true or false.<br>(Boolean primitives are true and false).</p>
-		
 		<div class="row">
 			<input class="col-2 mx-2" type="text" id="anyValue" placeholder="NaN">
         </div>
@@ -108,7 +106,6 @@
 
 		<h4>Sorted Union</h4>
 		<p class="text-muted">Give two or more arrays and it will return a new array of unique values in the order of the original provided arrays.</p>
-		
 		<div class="row">
 			<input class="col-10 mx-2" type="text" id="originalArray" placeholder="[1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]">
         </div>
@@ -119,14 +116,22 @@
 
 		<h4>Convert HTML Entities</h4>
 		<p class="text-muted">Give a string and it will convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.<br><small>*If you don't need the outermost quotes, just don't give them.</small></p>
-
-		
 		<div class="row">
 			<input class="col-10 mx-2" type="text" id="stringTo" placeholder='Stuff in "quotation marks"'>
         </div>
       	<div class="row">
-			<button class="btn btn-sm btn-success mx-2" type="button"  id="convertIt">To Entities</button>
-			<input class="col-8 bg-success text-center" type="text" id="htmlEnt" readonly>
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="convertIt">To Entities</button>
+			<input class="col-8 bg-info text-center" type="text" id="htmlEnt" readonly>
+		</div>
+
+		<h4>Spinal Tap Case</h4>
+		<p class="text-muted">Spinal case is all-lowercase-words-joined-by-dashes.</p>
+		<div class="row">
+			<input class="col-10 mx-2" type="text" id="originalString" placeholder="AllThe-small Things">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="spinalIt">Convert It</button>
+			<input class="col-8 bg-success text-center" type="text" id="finalString" readonly>
 		</div>
 	</div>
 	<script

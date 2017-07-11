@@ -247,3 +247,17 @@ $("#convertIt").click(function() {
 	var stringTo = $("#stringTo").val();
 	$("#htmlEnt").val(convertHTML(stringTo));
 });
+
+// SPINAL TAP CASE
+function spinalCase(str) {
+  // $1 and $2 represents the groups in parenthesis.
+  // | represents the OR conditional
+  // \s for spaces
+  // g always for global
+	return str.replace(/([a-z])([A-Z])|\s|_/g, '$1'+'-'+'$2').toLowerCase();
+}
+// console.log(spinalCase('This Is Spinal Tap'));
+$("#spinalIt").click(function() {
+	var originalString = $("#originalString").val();
+	$("#finalString").val(spinalCase(originalString));
+});
