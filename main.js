@@ -261,3 +261,26 @@ $("#spinalIt").click(function() {
 	var originalString = $("#originalString").val();
 	$("#finalString").val(spinalCase(originalString));
 });
+
+
+// SUM ALL ODD FIBONACCI NUMBERS
+function sumFibs(num) {
+	var prevNumber = 0;
+    var currNumber = 1;
+    var sum = 0;
+    while (currNumber <= num) {
+        if (currNumber % 2 !== 0) {
+            sum += currNumber;
+        }
+
+        currNumber += prevNumber;
+        prevNumber = currNumber - prevNumber;
+    }
+    return sum;
+}
+// console.log(sumFibs(1000));
+
+$("#buttonFibo").click(function() {
+	var yourNumber = $("#yourNumber").val();
+	$("#yourFibo").val(sumFibs(yourNumber));
+});
