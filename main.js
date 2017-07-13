@@ -284,3 +284,36 @@ $("#buttonFibo").click(function() {
 	var yourNumber = $("#yourNumber").val();
 	$("#yourFibo").val(sumFibs(yourNumber));
 });
+
+
+// SUM ALL PRIMES
+function sumPrimes(num) {
+	var primeNumbers = [];
+	// loop from 2 to the included number
+	// We need to check every time if the number is prime (function - isPrimeNumber)
+	for (var j=2; j<=num; j++){
+		// If true, include that number
+		if(isPrimeNumber(j)){
+			primeNumbers.push(j);
+		}
+	}
+	//Sum all the numbers of the primeNumbers array
+	return primeNumbers.reduce(function(a,b){
+		return a+b;
+	});
+}
+function isPrimeNumber (num) {
+	// 2 is the first prime number, and we don't need the number itself
+	// Result is gonna be true or false.
+	for (var i=2; i<num; i++){
+		if (num%i===0){
+			return false;
+		}
+	}
+	return true;
+}
+// console.log(sumPrimes(977));
+$("#buttonPrime").click(function() {
+	var givenNumber = $("#givenNumber").val();
+	$("#yourPrime").val(sumPrimes(givenNumber));
+});
