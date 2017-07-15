@@ -199,7 +199,6 @@ function booWho(bool) {
 }
 
 // booWho(null);
-
 $("#checkIt").click(function() {
 	var input = $("#anyValue").val();
 	var bbool = eval(input);
@@ -224,7 +223,6 @@ function uniteUnique(arr) {
   return newArr;
 }
 // console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
-
 $("#sortIt").click(function() {
 	var originalArr = $("#originalArray").val();
 	originalArr = JSON.parse('[' + originalArr + ']');
@@ -279,7 +277,6 @@ function sumFibs(num) {
     return sum;
 }
 // console.log(sumFibs(1000));
-
 $("#buttonFibo").click(function() {
 	var yourNumber = $("#yourNumber").val();
 	$("#yourFibo").val(sumFibs(yourNumber));
@@ -316,4 +313,37 @@ function isPrimeNumber (num) {
 $("#buttonPrime").click(function() {
 	var givenNumber = $("#givenNumber").val();
 	$("#yourPrime").val(sumPrimes(givenNumber));
+});
+
+
+// SMALLEST COMMON MULTIPLE
+function smallestCommons(arr) {
+	// Not always in order.
+	arr.sort();
+	// New array with all numbers between these min and max.
+	var range = [];
+	for (var i=arr[0]; i<=arr[1]; i++){
+		range.push(i);
+	}
+	a = range [0];
+	// Using Euclid’s Algorithm
+	for (var j=1; j<range.length; j++){
+		b = range[j];
+		c = a;
+		// while a and b are not equal 0
+		while (a&&b) {
+			if(a>b){
+				a%=b;
+			} else{
+				b%=a;
+			}
+		}
+		a = c*range[j]/(a+b);
+	}
+	return a;
+}
+// console.log(smallestCommons([23, 18]));
+$("#lcm").click(function() {
+	var twoNum= eval($("#twoNum").val());
+	$("#commonMultiple").val(smallestCommons(twoNum));
 });
