@@ -347,3 +347,18 @@ $("#lcm").click(function() {
 	var twoNum= eval($("#twoNum").val());
 	$("#commonMultiple").val(smallestCommons(twoNum));
 });
+
+
+// FINDERS KEEPERS
+function findElement(arr, func) {
+  return arr.filter(func)[0];
+}
+// console.log(findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; }));
+
+$("#truth").click(function() {
+	var arr = eval($("#userArray").val());
+	// Function object needed because the user can change the statement.
+	var state = new Function("num", "return "+$("#statement").val());
+	// ""+object pr String() needed to transform undefined to "undefined"
+	$("#firstElement").val(String(findElement(arr, state)));
+});
