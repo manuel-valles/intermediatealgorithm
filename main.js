@@ -358,7 +358,28 @@ function findElement(arr, func) {
 $("#truth").click(function() {
 	var arr = eval($("#userArray").val());
 	// Function object needed because the user can change the statement.
-	var state = new Function("num", "return "+$("#statement").val());
-	// ""+object pr String() needed to transform undefined to "undefined"
+	var state = new Function("num", "return num"+$("#statement").val());
+	// ""+object or String() needed to transform undefined to "undefined"
 	$("#firstElement").val(String(findElement(arr, state)));
+});
+
+
+// DROP IT
+function dropElements(arr, func) {
+  var times = arr.length;
+  for (var i = 0; i < times; i++) {
+    if (func(arr[0])) {
+      break;
+    } else {
+      arr.shift();
+    }
+  }
+  return arr;
+}
+// console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
+
+$("#dropButton").click(function() {
+	var arr = eval($("#userArr").val());
+	var state = new Function("num", "return num"+$("#state").val());
+	$("#resultArr").val(JSON.stringify(dropElements(arr, state)));
 });
