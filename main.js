@@ -354,7 +354,6 @@ function findElement(arr, func) {
   return arr.filter(func)[0];
 }
 // console.log(findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; }));
-
 $("#truth").click(function() {
 	var arr = eval($("#userArray").val());
 	// Function object needed because the user can change the statement.
@@ -377,9 +376,22 @@ function dropElements(arr, func) {
   return arr;
 }
 // console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
-
 $("#dropButton").click(function() {
 	var arr = eval($("#userArr").val());
 	var state = new Function("num", "return num"+$("#state").val());
 	$("#resultArr").val(JSON.stringify(dropElements(arr, state)));
+});
+
+
+// STEAMROLLER
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+  return arr.reduce(function(acc, curr){
+  	return acc.concat(Array.isArray(curr) ? steamrollArray(curr) : curr);
+  },[]);
+}
+// console.log(steamrollArray([1, [2], [3, [[4]]]]));
+$("#flattener").click(function() {
+	var arr = eval($("#normalArray").val());
+	$("#flatArray").val(JSON.stringify(steamrollArray(arr)));
 });
