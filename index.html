@@ -197,11 +197,21 @@
 		<h4>SteamRoller</h4>
 		<p class="text-muted">Given an array, it will flatten it!</p>
 		<div class="row">
-			<input class="col-10 mx-2" type="text" id="normalArray" value="[1, [2], [3, [[4]]]]">
+			<input class="col-10 mx-2" type="text" id="normalArray" placeholder="[1, [2], [3, [[4]]]]">
         </div>
       	<div class="row">
 			<button class="btn btn-sm btn-success mx-2" type="button"  id="flattener">Flatten It</button>
 			<input class="col-3 bg-success text-center" type="text" id="flatArray" readonly>
+		</div>		
+
+		<h4>Binary Agents</h4>
+		<p class="text-muted">Given a binary string, it will return an English translated sentence.<br><small>*The binary string must be space separated and without quotation marks.</small></p>
+		<div class="row">
+			<input class="col-10 mx-2" type="text" id="binary" placeholder="01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="translator">Translate It</button>
+			<input class="col-8 bg-info text-center" type="text" id="english" readonly>
 		</div>
 	</div>
 	<script

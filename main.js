@@ -395,3 +395,20 @@ $("#flattener").click(function() {
 	var arr = eval($("#normalArray").val());
 	$("#flatArray").val(JSON.stringify(steamrollArray(arr)));
 });
+
+
+// BINARY AGENTS
+// We need to parse that binary to decimal to be able to use fromCharCode method.
+// console.log(String.fromCharCode(97));
+// console.log("a".charCodeAt());
+// var binary = "1101000" // code for 104 in decimal
+// var decimal = parseInt(binary, 2);
+function binaryAgent(str) {
+	return str.split(' ').map(function(bin){
+		return String.fromCharCode(parseInt(bin,2));
+	}).join('');
+}
+// console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+$("#translator").click(function() {
+	$("#english").val(binaryAgent($("#binary").val()));
+});
