@@ -412,3 +412,17 @@ function binaryAgent(str) {
 $("#translator").click(function() {
 	$("#english").val(binaryAgent($("#binary").val()));
 });
+
+
+// EVERYTHING BE TRUE
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  return collection.every(function(element){
+  	// Undefined if doesn't exist and a falsy value if it exists but it has a falsy value
+    return element[pre];
+  });
+}
+// console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex"));
+$("#truthyCheck").click(function() {
+	$("#trueFalseVal").val(truthCheck(eval($("#collection").val()), $("#predicate").val()));
+});

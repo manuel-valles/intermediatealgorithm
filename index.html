@@ -213,6 +213,18 @@
 			<button class="btn btn-sm btn-primary mx-2" type="button"  id="translator">Translate It</button>
 			<input class="col-8 bg-info text-center" type="text" id="english" readonly>
 		</div>
+
+		<h4>Everything Be True</h4>
+		<p class="text-muted">Check if the predicate (second argument) is truthy on all elements of a collection (first argument).</p>
+		<div class="row">
+			<h6 class="col-4">truthCheck(</h6>
+			<input class="col-11 mx-2" type="text" id="collection" placeholder='[{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}]'>,
+			<input class="col-2 mx-2" type="text" id="predicate" placeholder='sex'>);
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-success mx-2" type="button"  id="truthyCheck">TruthCheck</button>
+			<input class="col-2 bg-success text-center" type="text" id="trueFalseVal" readonly>
+		</div>
 	</div>
 	<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
