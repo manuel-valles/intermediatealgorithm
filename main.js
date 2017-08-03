@@ -426,3 +426,33 @@ function truthCheck(collection, pre) {
 $("#truthyCheck").click(function() {
 	$("#trueFalseVal").val(truthCheck(eval($("#collection").val()), $("#predicate").val()));
 });
+
+
+// ARGUMENTS OPTIONAL
+function addTogether() {
+	var args = [].slice.call(arguments);
+	// Throw an undefined if any argument is not a number.
+	if(!args.every(function(arg){
+		return typeof arg === "number";
+	})){
+		return undefined;
+	}
+	// If there is 2 arguments, let's do the sum;
+	if(args.length===2){
+		return args[0]+args[1];
+	} else{
+	// If not, let's create a function to add that optional argument to that.
+		var arg1 = args[0];
+		var addMore = function(arg2){
+			return addTogether(arg1,arg2);
+		};
+		// Indeed we need to execute that function:
+		return addMore;
+	}
+}
+// console.log(addTogether(2,3));
+$("#sumButton").click(function() {
+	var parameters = $("#parameters").val();
+	console.log("addTogether"+parameters);
+	$("#sumResult").val(String(eval("addTogether"+parameters)));
+});

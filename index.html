@@ -204,6 +204,7 @@
 			<input class="col-3 bg-success text-center" type="text" id="flatArray" readonly>
 		</div>		
 
+
 		<h4>Binary Agents</h4>
 		<p class="text-muted">Given a binary string, it will return an English translated sentence.<br><small>*The binary string must be space separated and without quotation marks.</small></p>
 		<div class="row">
@@ -225,6 +226,19 @@
 			<button class="btn btn-sm btn-success mx-2" type="button"  id="truthyCheck">TruthCheck</button>
 			<input class="col-2 bg-success text-center" type="text" id="trueFalseVal" readonly>
 		</div>
+
+
+		<h4>Arguments Optional</h4>
+		<p class="text-muted">This function sums two arguments together. If only one argument is provided, then it returns another function that expects one argument and returns the sum.<br>
+		<small>*Use parenthesis.<br>
+		For example: (2, 3)</small></p>
+		<div class="row">
+			<input class="col-5 mx-2" type="text" id="parameters" placeholder="(2)(3)">
+        </div>
+      	<div class="row">
+			<button class="btn btn-sm btn-primary mx-2" type="button"  id="sumButton">Sum It!</button>
+			<input class="col-2 bg-info text-center" type="text" id="sumResult" readonly>
+		</div>		
 	</div>
 	<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
